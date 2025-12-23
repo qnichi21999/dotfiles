@@ -1,0 +1,77 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "margin": 0,
+
+  "modules-left": [
+    "clock",
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "custom/separator",
+    "custom/ip",
+    "custom/separator",
+    "bluetooth",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "custom/ip": {
+    "exec": "IP=$(ip -4 addr show wlp2s0 | awk '/inet / {print $2}' | cut -d/ -f1); if [ -z \"$IP\" ]; then echo '{\"text\": \"\"}'; else echo '{\"text\": \"ip: '$IP'\"}'; fi",
+    "interval": 5,
+    "return-type": "json"
+  },
+
+
+
+  "bluetooth": {
+    "format": "bt: {device_alias}",
+    "format-disabled": "bt: off",
+    "format-connected": "bt: {device_alias}",
+    "tooltip": false,
+    "on-click": "blueman-manager"
+  },
+
+  "battery": {
+    "format": "bat: {capacity}%",
+    "format-charging": "bat: {capacity}%",
+    "format-plugged": "bat: {capacity}%",
+    "warning": 30,
+    "critical": 15,
+    "tooltip": false
+  },
+
+
+  "tray": {
+    "spacing": 6
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "cpu: {usage}%",
+    "interval": 2,
+    "tooltip": false,
+    "max": 100,
+    "warning": 80
+  }
+}
