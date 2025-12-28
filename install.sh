@@ -51,3 +51,4 @@ if command -v zsh >/dev/null 2>&1; then
   [ "$SHELL" != "$(command -v zsh)" ] && chsh -s "$(command -v zsh)"
 fi
 
+cat vscode-extensions.txt | xargs -L 1 code --install-extension
