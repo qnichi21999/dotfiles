@@ -33,7 +33,7 @@ window#waybar {
 }
 
 /* Workspaces */
-#workspaces button {
+#workspaces button.empty {
   border-radius: 0;
   padding: 0 6px;
   color: #d4be98; /* normal fg */
@@ -43,12 +43,16 @@ window#waybar {
 /* Active workspace */
 #workspaces button.active {
   color: #d8a657; /* yellow */
-  border-bottom: 2px solid #d8a657; /* underline */
+  border-bottom: 2px solid #d8a657;
+  border-radius: 0; /* underline */
 }
 
 /* Urgent workspace */
-#workspaces button.urgent {
+#workspaces button {
   color: #ea6962;
+  border-radius: 0;
+  padding: 0 6px;
+  border-bottom: 2px solid transparent;
   /* border-bottom: 2px solid #ea6962;  optional underline */
 }
 
@@ -64,8 +68,19 @@ window#waybar {
   color: @blue;
 }
 
+#pulseaudio {
+  color: #d8a657;
+}
+
+#pulseaudio.muted {
+  color: @red;
+}
+
 #bluetooth {
   color: @aqua;
+}
+#bluetooth.off {
+  color: #e78a4e;
 }
 
 /* === Battery states (Gruvbox Medium) === */

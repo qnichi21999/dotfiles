@@ -14,6 +14,8 @@
     "custom/separator",
     "custom/ip",
     "custom/separator",
+    "pulseaudio",
+    "custom/separator",
     "bluetooth",
     "custom/separator",
     "battery",
@@ -38,11 +40,15 @@
     "return-type": "json"
   },
 
-
+  "pulseaudio": {
+    "format": "vol: {volume}%",
+    "format-muted": "vol: m"
+  },
 
   "bluetooth": {
     "format": "bt: {device_alias}",
     "format-disabled": "bt: off",
+    "format-on": "bt: on",
     "format-connected": "bt: {device_alias}",
     "tooltip": false,
     "on-click": "blueman-manager"
