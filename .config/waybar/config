@@ -35,9 +35,11 @@
   },
 
   "custom/ip": {
-    "exec": "IP=$(ip -4 addr show wlp2s0 | awk '/inet / {print $2}' | cut -d/ -f1); if [ -z \"$IP\" ]; then echo '{\"text\": \"\"}'; else echo '{\"text\": \"ip: '$IP'\"}'; fi",
+    "exec": "~/.config/waybar/scripts/ip_fnnuy.sh",
     "interval": 5,
-    "return-type": "json"
+    "return-type": "json",
+    "on-scroll-down": "~/.config/waybar/scripts/ip_fnnuy.sh up",
+    "on-scroll-up": "~/.config/waybar/scripts/ip_fnnuy.sh down"
   },
 
   "pulseaudio": {

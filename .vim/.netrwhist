@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/qnichi'
+let g:netrw_dirhist_5='/home/qnichi/Documents'
+let g:netrw_dirhist_4='/home/qnichi'
+let g:netrw_dirhist_3='/home/qnichi/projects'
+let g:netrw_dirhist_2='/home/qnichi/projects/digdowndumbass'
 let g:netrw_dirhist_1='/home/qnichi/.config/hypr'
