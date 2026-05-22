@@ -1,0 +1,116 @@
+[General]
+ColorScheme=GruvboxDark
+Name=Gruvbox Dark
+shadeSortColumn=true
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=136
+View Style=DetailTree
+
+[Icons]
+Theme=Papirus-Dark
+
+[Colors:Window]
+BackgroundNormal=40,40,40
+BackgroundAlternate=50,48,47
+ForegroundNormal=235,219,178
+ForegroundInactive=146,131,116
+ForegroundActive=250,189,47
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[Colors:View]
+BackgroundNormal=29,32,33
+BackgroundAlternate=40,40,40
+ForegroundNormal=235,219,178
+ForegroundInactive=146,131,116
+ForegroundActive=250,189,47
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[Colors:Button]
+BackgroundNormal=60,56,54
+BackgroundAlternate=80,73,69
+ForegroundNormal=235,219,178
+ForegroundInactive=146,131,116
+ForegroundActive=250,189,47
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[Colors:Selection]
+BackgroundNormal=69,133,136
+BackgroundAlternate=69,133,136
+ForegroundNormal=235,219,178
+ForegroundInactive=213,196,161
+ForegroundActive=235,219,178
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[Colors:Tooltip]
+BackgroundNormal=60,56,54
+BackgroundAlternate=50,48,47
+ForegroundNormal=235,219,178
+ForegroundInactive=146,131,116
+ForegroundActive=250,189,47
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[Colors:Complementary]
+BackgroundNormal=29,32,33
+BackgroundAlternate=40,40,40
+ForegroundNormal=235,219,178
+ForegroundInactive=146,131,116
+ForegroundActive=250,189,47
+ForegroundLink=131,165,152
+ForegroundVisited=211,134,155
+ForegroundNegative=251,73,52
+ForegroundNeutral=254,128,25
+ForegroundPositive=184,187,38
+DecorationFocus=69,133,136
+DecorationHover=69,133,136
+
+[WM]
+activeBackground=40,40,40
+activeForeground=235,219,178
+activeBlend=235,219,178
+inactiveBackground=29,32,33
+inactiveForeground=146,131,116
+inactiveBlend=146,131,116

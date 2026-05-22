@@ -1,0 +1,70 @@
+# Arch packages for this Hyprland setup.
+# Lines starting with '#' and blank lines are ignored by install.sh.
+# AUR-only packages live in aur-packages.txt.
+
+# --- Hyprland desktop ---
+hyprland
+hyprpaper
+hyprlock
+hypridle
+hyprpolkitagent
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+
+# --- Bar / launcher / notifications ---
+waybar
+rofi
+dunst
+
+# --- Terminal / shell ---
+kitty
+zsh
+zsh-syntax-highlighting
+tmux
+neovim
+vim
+stow
+git
+
+# --- File manager ---
+thunar
+thunar-archive-plugin
+thunar-volman
+tumbler
+gvfs
+file-roller
+
+# --- Theming ---
+nwg-look
+qt5ct
+qt6ct
+papirus-icon-theme
+ttf-iosevka-nerd
+noto-fonts
+noto-fonts-emoji
+
+# --- Clipboard / screenshot ---
+cliphist
+wl-clipboard
+grim
+slurp
+
+# --- Audio ---
+pipewire
+pipewire-pulse
+wireplumber
+pavucontrol
+playerctl
+
+# --- Network / bluetooth ---
+networkmanager
+network-manager-applet
+bluez
+bluez-utils
+blueman
+
+# --- Misc ---
+brightnessctl
+opentabletdriver
+polkit
+jq
