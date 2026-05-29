@@ -14,7 +14,7 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
 
 # Stow packages (each top-level dir whose contents mirror $HOME).
-PACKAGES=(hypr waybar kitty rofi dunst gtk qt nwg-look zsh tmux thunar opentabletdriver themes)
+PACKAGES=(hypr waybar kitty rofi dunst gtk qt nwg-look zsh tmux thunar themes)
 
 DO_PACKAGES=1
 DO_STOW=1
