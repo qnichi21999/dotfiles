@@ -1,14 +1,14 @@
-/* === Gruvbox Medium === */
-@define-color bg        #282828;
-@define-color bg-alt    #32302f;
-@define-color fg        #d4be98;
-@define-color yellow    #d8a657;
-@define-color blue      #7daea3;
-@define-color aqua      #89b482;
-@define-color red       #ea6962;
-@define-color border    #3c3836;
+/* Gruvbox Medium */
+@define-color bg     #282828;
+@define-color bg-alt #32302f;
+@define-color fg     #d4be98;
+@define-color yellow #d8a657;
+@define-color orange #e78a4e;
+@define-color blue   #7daea3;
+@define-color aqua   #89b482;
+@define-color red    #ea6962;
+@define-color border #3c3836;
 
-/* === Bar === */
 * {
   font-family: "Iosevka Nerd Font";
   font-size: 14px;
@@ -20,7 +20,6 @@ window#waybar {
   box-shadow: inset 0 -1px 0 @border;
 }
 
-/* === General Modules === */
 #workspaces,
 #clock,
 #battery,
@@ -32,44 +31,33 @@ window#waybar {
   background: transparent;
 }
 
-/* Workspaces */
-#workspaces button.empty {
-  border-radius: 0;
-  padding: 0 6px;
-  color: #d4be98; /* normal fg */
-  border-bottom: 2px solid transparent;
-}
-
-/* Active workspace */
-#workspaces button.active {
-  color: #d8a657; /* yellow */
-  border-bottom: 2px solid #d8a657;
-  border-radius: 0; /* underline */
-}
-
-/* Urgent workspace */
 #workspaces button {
-  color: #ea6962;
+  color: @red;
   border-radius: 0;
   padding: 0 6px;
   border-bottom: 2px solid transparent;
-  /* border-bottom: 2px solid #ea6962;  optional underline */
 }
 
+#workspaces button.empty {
+  color: @fg;
+}
 
-/* === Clock === */
+#workspaces button.active {
+  color: @yellow;
+  border-bottom: 2px solid @yellow;
+}
+
 #clock {
   color: @aqua;
   padding-bottom: 2px;
 }
 
-/* === Right side modules === */
 #custom-ip {
   color: @blue;
 }
 
 #pulseaudio {
-  color: #d8a657;
+  color: @yellow;
 }
 
 #pulseaudio.muted {
@@ -79,49 +67,65 @@ window#waybar {
 #bluetooth {
   color: @aqua;
 }
+
 #bluetooth.off {
-  color: #e78a4e;
+  color: @orange;
 }
 
-/* === Battery states (Gruvbox Medium) === */
-
-/* Normal */
 #battery {
-  color: #d8a657; /* yellow */
+  color: @yellow;
 }
 
-/* Charging / plugged in */
 #battery.charging,
 #battery.plugged {
-  color: #89b482; /* green/aqua */
+  color: @aqua;
 }
 
-/* Low battery */
 #battery.warning {
-  color: #e78a4e; /* orange */
+  color: @orange;
 }
 
-/* Critical battery */
 #battery.critical {
-  color: #ea6962; /* red */
+  color: @red;
 }
 
-
-/* === Separator === */
 #custom-separator {
   color: @border;
 }
 
-/* === Tray === */
 #tray {
   padding-right: 8px;
 }
 
 #cpu {
-  color: @aqua ; /* normal Gruvbox blue */
+  color: @aqua;
 }
 
 #cpu.warning {
-  color: #ea6962; /* red when CPU > 80% */
+  color: @red;
 }
 
+#image.claude-arc {
+  padding: 0 0 0 6px;
+  background: transparent;
+}
+
+#custom-claude {
+  padding: 0 6px 0 4px;
+  background: transparent;
+  color: @orange;
+}
+
+#custom-claude.warning {
+  color: @yellow;
+}
+
+#custom-claude.critical {
+  color: @red;
+}
+
+#custom-claude.offline,
+#custom-claude.error,
+#custom-claude.idle {
+  color: @border;
+}

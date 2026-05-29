@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "height": 0,
-  "margin": 0,
+  "margin-bottom": -1,
 
   "modules-left": [
     "clock",
@@ -10,6 +10,9 @@
   ],
 
   "modules-right": [
+    "image#claude-arc",
+    "custom/claude",
+    "custom/separator",
     "cpu",
     "custom/separator",
     "custom/ip",
@@ -81,5 +84,21 @@
     "tooltip": false,
     "max": 100,
     "warning": 80
+  },
+
+  "custom/claude": {
+    "exec": "~/.config/waybar/scripts/claude_limits.sh",
+    "interval": 300,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/claude_limits_popup.sh"
+  },
+
+  "image#claude-arc": {
+    "path": "/home/qnichi/.cache/claude-limits-arc.svg",
+    "size": 18,
+    "interval": 300,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/claude_limits_popup.sh"
   }
 }
