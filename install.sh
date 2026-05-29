@@ -36,13 +36,15 @@ install_packages() {
 
   info "Installing repo packages from packages.txt"
   mapfile -t pkgs < <(grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt")
-  sudo pacman -S --needed --noconfirm "${pkgs[@]}"
+  # -Syu (not -S): always sync+upgrade so a new package never pulls a
+  # dependency newer than the rest of the system (partial upgrade).
+  sudo pacman -Syu --needed --noconfirm "${pkgs[@]}"
 
   # AUR packages need an AUR helper.
   if [ -s "$DOTFILES/aur-packages.txt" ]; then
     if ! command -v yay >/dev/null 2>&1; then
       info "Installing yay (AUR helper)"
-      sudo pacman -S --needed --noconfirm git base-devel
+      sudo pacman -Syu --needed --noconfirm git base-devel
       tmp="$(mktemp -d)"
       git clone https://aur.archlinux.org/yay-bin.git "$tmp/yay"
       ( cd "$tmp/yay" && makepkg -si --noconfirm )
@@ -50,7 +52,7 @@ install_packages() {
     fi
     info "Installing AUR packages from aur-packages.txt"
     mapfile -t aur < <(grep -vE '^\s*(#|$)' "$DOTFILES/aur-packages.txt")
-    [ ${#aur[@]} -gt 0 ] && yay -S --needed --noconfirm "${aur[@]}"
+    [ ${#aur[@]} -gt 0 ] && yay -Syu --needed --noconfirm "${aur[@]}"
   fi
 
   info "Refreshing font cache"
